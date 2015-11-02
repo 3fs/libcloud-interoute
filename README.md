@@ -22,5 +22,12 @@ set_driver('interoute', 'interoute.libcloud.compute', 'InterouteNodeDriver')
 # Your code which uses the driver.
 # For example:
 Driver = get_driver('interoute')
+
+# This driver is able to use different Interoute VDC regions
+conn = Driver(key=<apikey>,
+              secret=<secretkey>,
+              host=<host>,
+              path=<path>,
+              region=<vdcregion>)
 ```
 or [RTFM](https://libcloud.readthedocs.org/en/latest/other/registering-a-third-party-driver.html)
